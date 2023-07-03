@@ -1,0 +1,27 @@
+import { Feature } from "./Feature";
+declare class PaymentConnectorFeature {
+    /**
+    *
+    */
+    'displayName'?: string;
+    /**
+    *
+    */
+    'feature'?: Feature;
+    /**
+    * The ID is the primary key of the entity. The ID identifies the entity uniquely.
+    */
+    'id'?: number;
+    static discriminator: string | undefined;
+    static attributeTypeMap: Array<{
+        name: string;
+        baseName: string;
+        type: string;
+    }>;
+    static getAttributeTypeMap(): {
+        name: string;
+        baseName: string;
+        type: string;
+    }[];
+}
+export { PaymentConnectorFeature };
